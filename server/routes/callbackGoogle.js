@@ -36,9 +36,8 @@ router.get("/", (req, res) => {
       (error, response, body) => {
         if (!error && response.statusCode === 200) {
           config.youtube_access_token = body.access_token;
-          console.log(body.access_token);
           config.youtube_refresh_token = body.refresh_token;
-          res.redirect(`http://localhost:${config.clientPort}`);
+          res.redirect(`http://127.0.0.1:${config.clientPort}`);
           console.log("Successfully logged into Youtube");
         } else {
           console.log("error");

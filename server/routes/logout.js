@@ -8,7 +8,7 @@ const cookieParser = require("cookie-parser");
 
  router.get("/", (req, res) => {
     config.loggedOut = true;
-    res.redirect(`http://localhost:${config.clientPort}`);
+    res.redirect(`http://127.0.0.1:${config.clientPort}`);
  });
 
 module.exports = router;

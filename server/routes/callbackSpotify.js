@@ -38,9 +38,8 @@ router.get("/", (req, res) => {
         if (!error && response.statusCode === 200) {
           config.access_token = body.access_token;
           config.refresh_token = body.refresh_token;
-          console.log(config.access_token);
           config.loggedOut = false;
-          res.redirect(`http://localhost:${config.clientPort}`);
+          res.redirect(`http://127.0.0.1:${config.clientPort}`);
           console.log("Successfully logged into Spotify");
         } else {
           console.log("error");

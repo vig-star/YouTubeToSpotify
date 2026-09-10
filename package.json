@@ -1,8 +1,8 @@
 {
   "name": "youtubetospotify",
   "version": "1.0.0",
-  "description": "React/Node+Express Starter Template: https://www.section.io/engineering-education/how-to-setup-nodejs-express-for-react/",
-  "main": "index.js",
+  "description": "A React and Express playlist-transfer prototype connecting Spotify and YouTube.",
+  "main": "server/server.js",
   "dependencies": {
     "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
@@ -12,18 +12,31 @@
     "request": "^2.88.2"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node --env-file-if-exists=.env server/server.js",
+    "client": "npm --prefix client start",
+    "build": "npm --prefix client run build",
+    "test": "npm --prefix client test -- --watchAll=false"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SanjitPingili/YouTubeToSpotify.git"
+    "url": "git+https://github.com/vig-star/YouTubeToSpotify.git"
   },
-  "keywords": [],
+  "keywords": [
+    "spotify",
+    "youtube",
+    "playlists",
+    "react",
+    "express"
+  ],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/SanjitPingili/YouTubeToSpotify/issues"
+    "url": "https://github.com/vig-star/YouTubeToSpotify/issues"
   },
-  "homepage": "https://github.com/SanjitPingili/YouTubeToSpotify#readme",
-  "devDependencies": {}
+  "homepage": "https://github.com/vig-star/YouTubeToSpotify#readme",
+  "devDependencies": {},
+  "private": true,
+  "engines": {
+    "node": ">=22.9.0"
+  }
 }
